@@ -53,6 +53,7 @@ double convertKilometersInFeet(double unitInKilometers) {
         [buf appendString:[@(unitInFeet) stringValue]];
     }
     self.outputField.text = buf;
+    [self.view endEditing:YES];
 }
 
 - (void)viewDidLoad {

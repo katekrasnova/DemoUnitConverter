@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					D1F1C0061C0BB12F0069B6A3 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = VFT96SPKF7;
 					};
 				};
 			};
@@ -263,6 +264,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VFT96SPKF7;
 				INFOPLIST_FILE = UnitConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Kate.UnitConverter";
@@ -274,6 +276,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VFT96SPKF7;
 				INFOPLIST_FILE = UnitConverter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.Kate.UnitConverter";
@@ -300,6 +303,7 @@
 				D1F1C0201C0BB12F0069B6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
