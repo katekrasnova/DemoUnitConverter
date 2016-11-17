@@ -1,25 +1,94 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Up6-y3-TEj">
+                                <rect key="frame" x="74" y="249" width="227" height="29"/>
+                                <segments>
+                                    <segment title="miles (mi)"/>
+                                    <segment title="yards (yd)"/>
+                                    <segment title="feet (ft)"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejg-Hw-AXc">
+                                <rect key="frame" x="162" y="285" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2vf-le-Mw1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Update for the Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5b-4v-P6f">
+                                <rect key="frame" x="81" y="323" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your value" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sPA-0d-IkC">
+                                <rect key="frame" x="81" y="135" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kilometers (km)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoc-v0-bLw">
+                                <rect key="frame" x="215" y="135" width="105" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LWH-SO-l6w"/>
+                                    <constraint firstAttribute="width" constant="105" id="W3w-ob-8Ik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q5b-4v-P6f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6fH-Mq-mLR"/>
+                            <constraint firstItem="q5b-4v-P6f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6pv-U8-cSl"/>
+                            <constraint firstItem="ejg-Hw-AXc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BUp-fE-cJd"/>
+                            <constraint firstItem="aoc-v0-bLw" firstAttribute="bottom" secondItem="sPA-0d-IkC" secondAttribute="bottom" id="Drb-q6-8gH"/>
+                            <constraint firstItem="Up6-y3-TEj" firstAttribute="top" secondItem="aoc-v0-bLw" secondAttribute="bottom" constant="93" id="ErJ-ue-hal"/>
+                            <constraint firstItem="q5b-4v-P6f" firstAttribute="top" secondItem="ejg-Hw-AXc" secondAttribute="bottom" constant="8" id="Mzr-VF-aDx"/>
+                            <constraint firstItem="aoc-v0-bLw" firstAttribute="height" secondItem="sPA-0d-IkC" secondAttribute="height" id="Tip-zE-wqE"/>
+                            <constraint firstItem="ejg-Hw-AXc" firstAttribute="top" secondItem="Up6-y3-TEj" secondAttribute="bottom" constant="8" id="XOw-jO-Ofm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aoc-v0-bLw" secondAttribute="trailing" constant="39" id="esV-nQ-ei2"/>
+                            <constraint firstItem="Up6-y3-TEj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gEl-PB-mtD"/>
+                            <constraint firstItem="aoc-v0-bLw" firstAttribute="leading" secondItem="sPA-0d-IkC" secondAttribute="trailing" constant="8" id="kq6-qa-OK3"/>
+                            <constraint firstItem="Up6-y3-TEj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lJ9-xk-Tsm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputField" destination="sPA-0d-IkC" id="50m-am-o2P"/>
+                        <outlet property="outputField" destination="q5b-4v-P6f" id="2Op-rI-wWJ"/>
+                        <outlet property="segmentController" destination="Up6-y3-TEj" id="A8x-U7-u39"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="234" y="340"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>
